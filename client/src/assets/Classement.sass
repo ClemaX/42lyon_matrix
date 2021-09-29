@@ -1,0 +1,95 @@
+
+.content
+	position: relative
+	top: 78px
+	padding: 16px
+	max-width: 625px
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	.reg
+		position: relative
+		display: block
+		height: 82px
+		margin-bottom: 32px	
+		animation: classbar-appear .2s ease-out
+		animation-fill-mode: backwards
+		font-family: 'Open Sans', sans-serif
+
+		&:hover
+			.image
+				.pos
+					background-color: rgba(0, 0, 0, .5)
+					opacity: 1
+		.login
+			position: absolute
+			left: 74px
+			text-transform: uppercase
+
+		.pool_year
+			position: absolute
+			top: 24px
+			left: 74px
+			font-size: 14px
+			opacity: .5
+
+		.last_update
+			position: absolute
+			top: 66px
+			left: 74px
+			font-size: 12px	
+			text-transform: lowercase
+			opacity: .5
+		
+		.image
+			position: absolute
+			width: 64px
+			height: 64px
+			border-radius: 50%
+			background-position: center
+			background-color: #484848
+			background-size: cover
+			.pos
+				font-size: 24px
+				width: 100%
+				height: 64px
+				line-height: 64px
+				border-radius: 50%
+				vertical-align: middle
+				text-align: center
+				transition: .2s all linear
+				opacity: 0
+		.value
+			display: block
+			position: absolute
+			right: 40px
+			top: 0px
+			font-size: 22px
+			//background-color: #544366 
+			border-radius: 5px
+			padding: 8px
+			text-align: center
+			min-width: 70px
+		.bar-container
+			position: absolute
+			width: 70%
+			left: 72px
+			top: 50px
+			background-color: #544366
+			border-radius: 5px
+			.bar
+				background-color: #BB86FC99
+				height: 12px
+				border-radius: 5px
+				width: 0%
+				animation: tesst 1s ease-out
+				animation-fill-mode: forwards
+		&.first
+			.value, .bar-container, 
+				background-color: #609197
+			.bar
+				background-color: #86d1fcd3
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dayjs": "^1.8.34",
+    "mongoose": "^5.10.2",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "mon": "nodemon srcs/app.js "
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

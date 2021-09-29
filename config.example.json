@@ -1,0 +1,7 @@
+{
+	"env"			: "dev",
+	"uid"			: "intra-client-id",
+	"secret"		: "intra-client-secret",
+	"redirect_uri"	: "intra-redirect-uri",
+	"mongo_uri"		: "mongodb+srv://localhost/42matrix?retryWrites=true&w=majority"
+}

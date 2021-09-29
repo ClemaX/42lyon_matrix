@@ -1,0 +1,240 @@
+@import "./Variables"
+
+@keyframes cluster-slide-in
+	0%
+		max-height: 0px	
+		min-height: 0px
+	100%
+		max-height: 200px	
+		min-height: 32px
+
+
+@keyframes cluster-slide-out
+	0%
+		max-height: 200px	
+		min-height: 32px
+	100%
+		max-height: 0px	
+		min-height: 0px
+
+.cluster-search
+	width: 100%
+	input
+		width: 100%
+		background: #484848
+		border: 1px solid #585858 
+		border-radius: 5px
+		color: #aaaaaa
+		margin-bottom: 16px
+	.autocomplete
+		position: absolute
+		opacity: 1
+		background-color: lighten($background-color, 10)
+		width: calc(100% - 3px)
+		margin-top: -20px
+		border-radius: 5px
+		transition: all .1s ease-in-out
+		z-index: 100
+		max-height: 300px
+		overflow-y: auto
+		border: 1px solid  lighten($background-color, 20)
+		&.show
+			opacity: 1
+		.item
+			display: flex
+			justify-content: start
+			align-items: center
+			height: 32px
+			padding-left: 16px
+			padding-top: 6px
+			padding-bottom: 6px
+			margin-top: 6px
+			&:hover
+				background-color: lighten($background-color, 15)
+				cursor: pointer
+			.avatar
+				width: 32px
+				height: 32px
+				background-size: cover
+				background-position: center center
+				border-radius: 50%
+			.login
+				margin-left: 6px
+
+
+
+
+@keyframes slide-in
+	0%
+		right: -356px
+	100%
+		right: 0px
+
+@keyframes slide-out
+	0%
+		right: 0px
+	100%
+		right: -356px
+
+.profile-popbox
+	position: fixed
+	width: 456px
+	height: 356px
+	border-radius: 5px
+	right: 0px
+	right: -456px
+	top: 86px
+	z-index: 200
+	animation: slide-out
+	animation-duration: .2s
+	background-color: lighten($background-color, 10)
+	border: 1px solid lighten($background-color, 15)
+	&.show
+		animation: slide-in
+		animation-duration: .2s
+		animation-fill-mode: forwards
+	.image
+		border-radius: 5px
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-position: center center
+	.infos
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 6px
+		.login
+			margin-top: 6px
+			font-size: 36px
+			color: #ffffff
+			//mix-blend-mode: difference;
+			font-weight: bold
+			font-family: 'Exo', sans-serif;
+			text-shadow: 0px 0px 10px #000000
+		.level
+			position: absolute
+			font-size: 12px
+			bottom: 0
+			background-color: #00000099
+			width: 100%
+		.name
+			font-size: 22px
+			color: #ffffff
+			//mix-blend-mode: exclusion;
+			font-weight: bold
+			text-shadow: 0px 0px 10px #000000
+		.location
+			font-size: 16px
+			color: #ffffff
+			//mix-blend-mode: exclusion;
+			text-shadow: 0px 0px 10px #000000
+
+
+		//background: linear-gradient(0deg, #424242 25%, rgba(255,255,255,0) 100%); 
+
+@keyframes popin 
+	0%
+		opacity: 0
+		transform: scale(0)
+	100%
+		opacity: 1
+		transform: scale(1)
+
+.container-cm
+	width: 100%
+	height: 70%
+	//background-color: #00009955
+	pointer-events: none
+	.fixed-map-container
+		display: flex
+		flex-direction: column
+		//align-content: center
+		//justify-content: center
+		align-items: center
+		//height: 564px
+		//height: 700px
+		//width: 900px
+		width: 100%
+		height: 100%
+		transform: rotate(90deg)
+		justify-content: center
+		//background-color: #99000055
+		z-index: 0
+		.map-container
+
+			display: flex
+			//width: 960px
+			//width: 1280px
+			//width: 90%
+
+			//height: 50%
+			//background-color: #88222255
+
+			.column
+				display: flex
+				flex-direction: column
+				background-color: lighten($background-color, 4)
+				min-width: 12px
+				margin-left: 20px
+				border-radius: 5px
+				align-items: center
+				max-width: 74px
+				.row
+					position: relative
+					display: flex
+					background-color: lighten($background-color, 10)
+					border: 1px solid lighten($background-color, 15)
+					//width: 56px
+					//height: 56px
+					margin-top: 4px
+					margin-bottom: 4px
+					border-radius: 5px
+					max-width: 74px
+					//padding-bottom: 100%
+					//padding-left: 100%
+					&.temp
+						opacity: .5
+					&.disabled
+						opacity: 0
+					
+					&:nth-child(even)
+						transform: translateX(-4px)
+						//margin-left: -8px
+					&:nth-child(odd)
+						transform: translateX(4px)
+						//margin-left: 18px
+					&.reversed
+						&:nth-child(odd)
+							transform: translateX(-4px)
+						&:nth-child(even)
+							transform: translateX(4px)
+
+					.inside
+						//display: none
+						position: absolute
+						top: 0
+						left: 0
+						font-size: 12px
+						transform: rotate(-90deg)
+
+						&.active
+							border-radius: 5px
+							width: 100%
+							height: 100%
+							font-size: 0px
+							background-size: cover
+							background-position: center center
+							//transition: all .1s ease-out
+							//animation: popin
+							//animation-timing-function: ease-in
+							//animation-duration: .2s 
+							//animation-fill-mode: backwards
+							transform: rotate(-90deg)
+							pointer-events: auto
+							opacity: 1
+							&:hover
+								transform: scale(1.1)  rotate(-90deg)
+
