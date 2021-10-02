@@ -1,4 +1,9 @@
-Dependencies : 
+# 42lyon_matrix
+42lyon_matrix is a web project that uses [42's API](https://api.intra.42.fr/apidoc) to list and show the location of online users inside the [42lyon](https://42lyon.fr) clusters.
+
+This is a fork of [Sylvain Lopez's 42matrice](https://gitlab.com/Sylrelo/42matrice), it's goal is to improve the responsive UI and refactor the code.
+
+## Dependencies
 
 ```
 nodejs >= 14
@@ -7,26 +12,26 @@ pm2
 nginx
 ```
 
-Use the right configuration file : 
+## Use the right configuration file :
 
 ```bash
 cp config.[REALM].json config.json
 ```
 
-Starting the back-end :
+## Starting the back-end :
 ```
 yarn install
 pm2 start app.js
 pm2 save //to enable auto-start
 ```
 
-Building the front-end : 
+## Building the front-end :
 ```
 yarn install
 yarn build
 ```
 
-nginx example configuration file :
+## nginx example configuration file :
 
 ```
 server {

@@ -29,5 +29,5 @@ let student = writable({
 	image	: null
 })
 
-let socket = io(window.location.hostname === "localhost" ? "localhost:5666" : "/")
+let socket = io("/api/")
 export { socket, authentication, state, socket_data, student }
