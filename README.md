@@ -3,46 +3,62 @@
 
 This is a fork of [Sylvain Lopez's 42matrice](https://gitlab.com/Sylrelo/42matrice), it's goal is to improve the responsive UI and refactor the code.
 
-## Dependencies
+---
 
+## Client 
+
+### Build stage dependencies:
 ```
-nodejs >= 14
+nodejs >= 14 < 15
 yarn
-pm2
+make
+g++
+```
+
+### Production stage dependencies:
+```
 nginx
 ```
 
-## Use the right configuration file :
+---
+
+## Server
+### Configuration:
+
+TODO: Use secrets
 
 ```bash
 cp config.[REALM].json config.json
 ```
 
-## Starting the back-end :
+### Starting the back-end:
 ```
 yarn install
 pm2 start app.js
 pm2 save //to enable auto-start
 ```
 
-## Building the front-end :
+### Building the front-end:
 ```
 yarn install
 yarn build
 ```
 
-## nginx example configuration file :
+### nginx example configuration file:
+
+TODO: Use reverse_proxy container
 
 ```
 server {
+	server_name 42.slopez.dev;
 
-    server_name 42.slopez.dev;
 	root /var/www/42matrice/client/public;
 	index index.html;
 
 	server_name _;
+
 	location / {
-			try_files $uri $uri/ =404;
+		try_files $uri $uri/ =404;
 	}
 
 	location /socket.io/ {

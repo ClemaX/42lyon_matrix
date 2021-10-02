@@ -1,5 +1,8 @@
 # Build stage
-FROM node:16.10.0-alpine3.14 as build-stage
+FROM node:14.18.0-alpine3.11 as build-stage
+
+# Install dependencies
+RUN apk add --update --no-cache ca-certificates yarn python3 make g++
 
 # Prepare workdir
 COPY --chown=node:node package*.json /app/
@@ -10,12 +13,12 @@ USER node
 WORKDIR /app
 
 # Install modules
-RUN npm ci
+RUN yarn install
 
 # Install sources
-COPY --chown=node:node srcs/ .
+COPY --chown=node:node . .
 
-RUN npm run build
+RUN yarn build
 
 # Server stage
 FROM alpine:3.14.0 as production
