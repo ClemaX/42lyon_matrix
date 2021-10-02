@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"dayjs": "^1.8.35",
+		"docker-secret": "^1.2.3",
 		"sirv-cli": "^1.0.0",
 		"svelte-spa-router": "^3.0.0"
 	}

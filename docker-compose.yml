@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: /run/secrets/mongo_root_password
+    secrets:
+      - mongo_root_password
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD_FILE: /run/secrets/mongo_root_password
+      ME_CONFIG_MONGODB_URL: mongodb://root:todo@mongo:2127
+    secrets:
+      - mongo_root_password
+  client:
+    image: 42lyon_matrix/client
+    restart: always
+    build:
+      context: ./client
+      target: production
+    expose:
+      - "80"
+
+secrets:
+  mongo_root_password:
+    file: ./secrets/mongo_root_password

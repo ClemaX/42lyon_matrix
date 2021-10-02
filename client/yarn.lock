@@ -1305,6 +1305,11 @@ detect-indent@^6.0.0:
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-6.0.0.tgz#0abd0f549f69fc6659a254fe96786186b6f528fd"
   integrity sha512-oSyFlqaTHCItVRGK5RmrmjB+CmaMOW7IaNA/kdxqhoa6d17j/5ce9O9eWXmV/KEdRwqpQA+Vqe8a8Bsybu4YnA==
 
+docker-secret@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/docker-secret/-/docker-secret-1.2.3.tgz#5df86ab7183821e77c030c4435f0dc4b34275c79"
+  integrity sha512-JFUGiZEiNO0Hi9YzZAdCc5MwUpgQOjz0OeZkkcEv+lH6ZBkXNK97w2gcBQCsg5WRsT+Cj9eKFhuYyDxT8j56+A==
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"

@@ -1,3 +1,5 @@
 node_modules/
 config.json
 deploy.sh
+secrets/*
+!secrets/.gitkeep

@@ -1,6 +1,10 @@
 # Build stage
 FROM node:14.18.0-alpine3.11 as build-stage
 
+ENV ENV=dev
+ENV OAUTH_UID=
+ENV REDIRECT_URI=
+
 # Install dependencies
 RUN apk add --update --no-cache ca-certificates yarn python3 make g++
 

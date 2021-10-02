@@ -1,4 +1,4 @@
-const env = require("../../../config.json")
+const secrets = require("docker-secret")
 
 module.exports = {
 	...env,

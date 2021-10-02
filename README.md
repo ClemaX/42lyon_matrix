@@ -5,7 +5,9 @@ This is a fork of [Sylvain Lopez's 42matrice](https://gitlab.com/Sylrelo/42matri
 
 ---
 
-## Client 
+## Client
+
+TODO: Rename ../assets/ajax-loader (1).gif to ../assets/ajax-loader-dark.gif
 
 ### Build stage dependencies:
 ```
