@@ -104,6 +104,7 @@
 		<span class="item" class:selected={selected_year === 2018} on:click={() => {cleanData(); selected_year = 2018}}>2018</span>
 		<span class="item" class:selected={selected_year === 2019} on:click={() => {cleanData(); selected_year = 2019}}>2019</span>
 		<span class="item" class:selected={selected_year === 2020} on:click={() => {cleanData(); selected_year = 2020}}>2020</span>
+		<span class="item" class:selected={selected_year === 2021} on:click={() => {cleanData(); selected_year = 2021}}>2021</span>
 	</div>
 	<div class="alert info">
 		Ranking are updated for students that have logged in school in the last 6 months (starting from 24 november 2020)
