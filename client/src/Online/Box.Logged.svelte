@@ -152,12 +152,11 @@ import { socket } from "../store";
 </script>
 
 <div class="online-stat">
-
-	<div class="chart-container" >
-		<canvas id="chart" bind:this={canvas}></canvas>
-	</div>
 	<div class="online-text">
 		<b>{data.length}</b>
+	</div>
+	<div class="chart-container" >
+		<canvas id="chart" bind:this={canvas}></canvas>
 	</div>
 </div> 
 
@@ -186,6 +185,7 @@ import { socket } from "../store";
 		margin-left: auto
 		margin-right: auto
 		.online-text
+			pointer-events: none
 			position: absolute
 			top: 4px
 			right: 12px

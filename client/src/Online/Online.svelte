@@ -229,6 +229,7 @@
 		margin-left: auto
 		margin-right: auto
 		.online-text
+			pointer-events: none
 			position: absolute
 			top: 4px
 			right: 12px
